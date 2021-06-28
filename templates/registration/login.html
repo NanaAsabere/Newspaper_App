@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Newspaper Apps</title>
+</head>
+<body>
+	<main>
+		{% block content %}
+		<h2>login</h2>
+
+		<form method="post">
+			{% csrf_token %}
+			{{form.as_p}}
+			<button type="submit" class="btn btn-success ml-2">Login</button>
+		</form>
+		
+
+
+		{% endblock content %}
+	</main>
+
+</body>
+</html>
